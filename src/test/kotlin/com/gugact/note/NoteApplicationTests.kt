@@ -1,10 +1,10 @@
-package com.gugact.noterest
+package com.gugact.note
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class NoteRestApplicationTests {
+class NoteApplicationTests {
 
 	@Test
 	fun contextLoads() {

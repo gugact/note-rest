@@ -1,4 +1,4 @@
-package com.gugact.noterest
+package com.gugact.note
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @SpringBootApplication(exclude = [DataSourceAutoConfiguration::class])
-class NoteRestApplication
+class NoteApplication
 
 fun main(args: Array<String>) {
-    runApplication<NoteRestApplication>(*args)
+	runApplication<NoteApplication>(*args)
 }
 
 @RestController
 class HelloController() {
-    @GetMapping("/")
-    fun hello() = "Hello world"
+	@GetMapping("/")
+	fun hello() = "Hello world"
 }

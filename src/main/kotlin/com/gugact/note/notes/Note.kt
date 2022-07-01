@@ -1,4 +1,4 @@
-package com.gugact.noterest.note
+package com.gugact.note.notes
 
 data class Note(
     val id: String?,

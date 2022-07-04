@@ -6,7 +6,7 @@ import org.springframework.boot.runApplication
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
-@SpringBootApplication(exclude = [DataSourceAutoConfiguration::class])
+@SpringBootApplication
 class NoteApplication
 
 fun main(args: Array<String>) {
@@ -15,6 +15,6 @@ fun main(args: Array<String>) {
 
 @RestController
 class HelloController() {
-	@GetMapping("/")
+	@GetMapping
 	fun hello() = "Hello world"
 }

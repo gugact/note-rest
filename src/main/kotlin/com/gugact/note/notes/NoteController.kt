@@ -12,7 +12,7 @@ class NoteController(val service: NoteService) {
     fun findAll() = service.allNotes()
 
     @GetMapping("/{id}")
-    fun findById(@PathVariable id: String) = service.findNote(id)
+    fun findById(@PathVariable id: Long) = service.findNote(id)
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -20,9 +20,9 @@ class NoteController(val service: NoteService) {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    fun update(@RequestBody newNote: Note, @PathVariable id: String) = service.updateNote(newNote)
+    fun update(@RequestBody newNote: Note, @PathVariable id: Long) = service.updateNote(newNote, id)
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
-    fun delete(@PathVariable id: String) = service.deleteNote(id)
+    fun delete(@PathVariable id: Long) = service.deleteNote(id)
 }
